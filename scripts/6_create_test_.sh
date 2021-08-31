@@ -24,7 +24,7 @@ do
 	test_dir_class="$test_dir/$cname"
 	mkdir -p "$test_dir_class"
 	train_dir_class="$train_dir/$cname"
-	ls "$train_dir_class" | shuf -n $N | xargs -I{} mv "$train_dir_class/{}" "$test_dir_class"
+	ls "$train_dir_class" | gshuf -n $N | xargs -I{} mv "$train_dir_class/{}" "$test_dir_class"
 done
 
 echo "Number of files per class (train):"
